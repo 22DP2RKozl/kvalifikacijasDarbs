@@ -1,0 +1,237 @@
+:root {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #272727;
+    --primary-color: #696969;
+  }
+  
+  .darkmode {
+    --base-color: #1f1f1f;
+    --base-variant: #3a3a3a;
+    --text-color: #ffffff;
+    --secondary-text: #c5c5c5;
+    --primary-color: #252830;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  header {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-weight: bold;
+  }
+  
+  header .menu-toggle {
+    cursor: pointer;
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  #theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure it's not overlapping */
+  }
+  
+  #theme-switch svg {
+    fill: var(--primary-color);
+  }
+  
+  #theme-switch svg:last-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:first-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:last-child {
+    display: block;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(114, 114, 114);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .menu button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font: inherit;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menu button:hover {
+    background-color: var(--secondary-text);
+  }
+  
+  #add-ad-btn {
+    margin-top: 10px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .card h2 {
+    margin: 15px 0;
+  }
+  
+  .card p {
+    padding: 0 15px 15px;
+    color: gray;
+  }
+  
+  .card button {
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    margin-bottom: 15px;
+    padding: 15px 55px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card button:hover {
+    background-color: var(--secondary-text);
+    transform: scale(1.15);
+  }
+  
+  /* Modal for Adding Advertisement */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close-btn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Theme Switch Button */
+  #theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Make sure it's not overlapping */
+  }
+  
+  #theme-switch svg {
+    fill: var(--primary-color);
+  }
+  
+  #theme-switch svg:last-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:first-child {
+    display: none;
+  }
+  
+  .darkmode #theme-switch svg:last-child {
+    display: block;
+  }
+  
+  .darkmode aside {
+    background-color: var(--base-variant);
+  }
+  
+  .darkmode .card {
+    background-color: var(--base-variant);
+  }
+  
+  .darkmode .card button {
+    background-color: var(--base-color);
+  }
+  
+  .darkmode .card button:hover {
+    background-color: var(--primary-color);
+  }
+  
