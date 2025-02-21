@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Board</title>
-    <!-- Correct link to the CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">📢 AdBoard</div>
+        <div id="theme-switch">
+            🌙 <!-- Dark mode button -->
+        </div>
         <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="logo">📢 AdBoard</div>
     </header>
-    
 
-    <!-- Hidden Menu -->
+    <!-- Burger Menu -->
     <div class="menu" id="menu">
         <button id="add-ad-btn">➕ Add Advertisement</button>
     </div>
@@ -23,29 +24,22 @@
     <!-- Container for Ads -->
     <div class="container">
         <h2>✨ Advertisements ✨</h2>
-        <div class="ads-grid" id="ads-grid"></div>
-    </div>
 
-    <!-- Modal for Adding Advertisement -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="close-btn">❌</span>
-            <h2>📝 Add Advertisement</h2>
-            <input type="text" id="ad-title" placeholder="Title" required>
-            <textarea id="ad-description" placeholder="Description" required></textarea>
-            <button id="post-ad">Post 🚀</button>
+        <!-- Modal for Adding Advertisement, placed directly below the advertisements section -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-btn">❌</span>
+                <h2>📝 Add Advertisement</h2>
+                <input type="text" id="ad-title" placeholder="Title" required>
+                <textarea id="ad-description" placeholder="Description" required></textarea>
+                <button id="post-ad">Post 🚀</button>
+            </div>
         </div>
-    </div>
 
-    <!-- Theme Toggle -->
-    <div id="theme-switch">
-        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="10" cy="10" r="6" stroke="var(--primary-color)" stroke-width="2" />
-            <path d="M16 10c0 3.859-3.141 7-7 7s-7-3.141-7-7 3.141-7 7-7 7 3.141 7 7z" stroke="var(--primary-color)" stroke-width="2" />
-        </svg>
-        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 3.75a6.25 6.25 0 1 1 0 12.5A6.25 6.25 0 0 1 10 3.75z" fill="var(--primary-color)" />
-        </svg>
+        <!-- Cards container below advertisements section -->
+        <div class="ads-grid" id="ads-grid">
+            <!-- Ad cards will be loaded here -->
+        </div>
     </div>
 
     <script src="script.js"></script>
