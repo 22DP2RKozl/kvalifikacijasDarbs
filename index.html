@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Board</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sludinājumi</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sludinājumi</div>
+      <ul class="nav-links">
+        <li><a href="#about">Par vietni</a></li>
+        <li><a href="#advertising">Populārākie sludinājumi</a></li>
+        <li><a href="#contact">Sazināties ar mums</a></li>
+      </ul>
+      <div class="menu-icon">&#9776;</div>
+    </nav>
+  </header>
 
-    <header>
-        <div id="theme-switch">
-            🌙 <!-- Dark mode button -->
-        </div>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-        <div class="logo">📢 AdBoard</div>
-    </header>
-
-    <!-- Burger Menu -->
-    <div class="menu" id="menu">
-        <button id="add-ad-btn">➕ Add Advertisement</button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Laipni lūdzam</h1>
+      <p>Šī ir vieta, kur Jūsu darbs var atrast savu meistaru.</p>
+      <a href="#advertising" class="btn">Parādīt populārākos sludinājumus</a>
     </div>
+  </section>
 
-    <!-- Container for Ads -->
-    <div class="container">
-        <h2>✨ Advertisements ✨</h2>
-
-        <!-- Modal for Adding Advertisement, placed directly below the advertisements section -->
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <span class="close-btn" id="close-btn">❌</span>
-                <h2>📝 Add Advertisement</h2>
-                <input type="text" id="ad-title" placeholder="Title" required>
-                <textarea id="ad-description" placeholder="Description" required></textarea>
-                <button id="post-ad">Post 🚀</button>
-            </div>
-        </div>
-
-        <!-- Cards container below advertisements section -->
-        <div class="ads-grid" id="ads-grid">
-            <!-- Ad cards will be loaded here -->
-        </div>
+  <!-- Advertising Section -->
+  <section id="advertising" class="advertising">
+    <h2>Sludinājumi</h2>
+    <div class="advertising-grid">
+      <div class="advertising-card">
+        <img src="assets/images/advertising1.jpg" alt="advertising 1">
+        <h3>Sludinājums 1</h3>
+        <p>123</p>
+      </div>
+      <div class="advertising-card">
+        <img src="assets/images/advertising2.jpg" alt="advertising 2">
+        <h3>Sludinājums 2</h3>
+        <p>456</p>
+      </div>
+      <div class="advertising-card">
+        <img src="assets/images/advertising3.jpg" alt="advertising 3">
+        <h3>Sludinājums 3</h3>
+        <p>789</p>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>Par vietni</h2>
+    <p>piemērs</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Sazināties ar mums</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Jūsu vārds" required>
+      <input type="email" placeholder="Jūsu epasts" required>
+      <textarea placeholder="Jūsu ziņa" required></textarea>
+      <button type="submit" class="btn">Nosūtīt ziņu</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Roberts Kozlovs.</p>
+  </footer>
 </body>
 </html>
